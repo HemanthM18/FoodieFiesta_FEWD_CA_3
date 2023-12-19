@@ -62,18 +62,6 @@ function details(id){
   })
 }
 
-document.getElementById("randomButton").addEventListener('click', () => {
-    fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
-      .then(response => response.json())
-      .then(data => {
-        const randomMeal = data.meals[0];
-        displayRandomMeal(randomMeal);
-      })
-      .catch(error => {
-        console.log('Error fetching random meal:', error);
-      });
-  });
-  
   document.getElementById("randomButton").addEventListener('click', () => {
     fetch('https://www.themealdb.com/api/json/v1/1/random.php')
       .then(response => response.json())
